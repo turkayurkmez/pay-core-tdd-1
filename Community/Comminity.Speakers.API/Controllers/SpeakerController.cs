@@ -13,7 +13,7 @@ namespace Comminity.Speakers.API.Controllers
         {
             this.speakerService = speakerService;
         }
-
+        [HttpGet("{keyword}")]
         public IActionResult Search(string keyword)
         {
             var speakers = speakerService.GetSpeakersByName(keyword);
